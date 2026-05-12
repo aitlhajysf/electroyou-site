@@ -3,143 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroYou IPTV - أفضل خدمة في المغرب 2026</title>
+    <title>ElectroYou IPTV | الخدمة رقم #1 في المغرب</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --primary: #00d2ff; --secondary: #3a7bd5; --dark: #0f172a; --gold: #ffd700; --light: #f8fafc; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--dark); color: var(--light); margin: 0; padding: 0; line-height: 1.6; }
+        :root { --primary: #00d2ff; --secondary: #3a7bd5; --dark: #070b14; --gold: #fcc419; --light: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--dark); color: var(--light); margin: 0; padding: 0; }
         
-        /* Header & Hero */
-        header { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://source.unsplash.com/1600x900/?television,abstract'); background-size: cover; padding: 80px 20px; text-align: center; border-bottom: 4px solid var(--primary); }
-        .logo { font-size: 3rem; font-weight: 800; color: var(--primary); letter-spacing: 1px; }
-        .hero-sub { font-size: 1.4rem; color: var(--gold); margin: 15px 0; font-weight: bold; }
-        
+        /* Header Fix */
+        header { background: linear-gradient(rgba(7, 11, 20, 0.9), rgba(7, 11, 20, 0.9)), url('https://img.freepik.com/free-photo/abstract-dark-background-with-blue-light-lines_1017-31652.jpg'); background-size: cover; padding: 100px 20px; text-align: center; border-bottom: 4px solid var(--primary); }
+        .logo-img { width: 120px; margin-bottom: 20px; filter: drop-shadow(0 0 10px var(--primary)); }
+        .logo-text { font-size: 3.5rem; font-weight: 900; color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .logo-text span { color: var(--primary); }
+
         .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
 
-        /* Why Us Section */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 0; }
-        .feature-box { background: #1e293b; padding: 25px; border-radius: 15px; text-align: center; border: 1px solid #334155; }
-        .feature-box i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
-        .feature-box h4 { margin: 10px 0; color: #fff; }
+        /* Trusted Brands Section */
+        .brands { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 50px; align-items: center; }
+        .brands img { height: 40px; filter: grayscale(1) brightness(2); opacity: 0.7; }
 
-        /* Test Section */
-        .test-section { background: linear-gradient(45deg, #3a7bd5, #00d2ff); color: #fff; padding: 40px; border-radius: 25px; text-align: center; margin: 50px 0; box-shadow: 0 15px 35px rgba(0,210,255,0.3); }
-        .btn-test { background: white; color: var(--secondary); padding: 15px 40px; text-decoration: none; font-weight: 800; border-radius: 50px; display: inline-block; font-size: 1.2rem; transition: 0.3s; margin-top: 15px; }
-        .btn-test:hover { background: var(--dark); color: white; transform: scale(1.05); }
-
-        /* Pricing */
-        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: #1e293b; padding: 40px 20px; border-radius: 25px; text-align: center; border: 1px solid #334155; position: relative; transition: 0.3s; }
-        .card.popular { border: 2px solid var(--primary); transform: scale(1.05); }
-        .card.popular::before { content: "الأكثر طلباً"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #000; padding: 5px 20px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; }
-        .price { font-size: 3rem; font-weight: 900; margin: 20px 0; color: #fff; }
-        .price span { font-size: 1rem; color: #94a3b8; }
-        .btn-buy { background: #25d366; color: white; padding: 15px; text-decoration: none; border-radius: 12px; display: block; font-weight: bold; font-size: 1.1rem; margin-top: 20px; }
-
-        /* Apps Section */
-        .apps-section { text-align: center; margin-top: 80px; }
-        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 30px; }
-        .app-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; border: 1px solid #334155; transition: 0.3s; }
-        .app-card:hover { background: rgba(0,210,255,0.1); border-color: var(--primary); }
-        .app-card i { font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
-
-        footer { text-align: center; padding: 50px; border-top: 1px solid #334155; margin-top: 80px; color: #64748b; }
+        /* Pricing Section */
+        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: #111827; padding: 40px 20px; border-radius: 30px; text-align: center; border: 1px solid #1f2937; transition: 0.4s; position: relative; overflow: hidden; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,210,255,0.1); }
+        .card.featured { border: 2px solid var(--primary); background: #111b2d; }
+        .badge { position: absolute; top: 20px; right: -30px; background: var(--primary); color: #000; padding: 5px 40px; transform: rotate(45deg); font-weight: bold; font-size: 0.8rem; }
         
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50px; text-align: center; line-height: 60px; font-size: 30px; z-index: 100; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .price { font-size: 3.5rem; font-weight: 900; margin: 20px 0; display: flex; justify-content: center; align-items: baseline; }
+        .price span { font-size: 1.2rem; margin-right: 5px; color: #94a3b8; }
+
+        /* Buttons */
+        .btn { padding: 15px 30px; border-radius: 15px; text-decoration: none; font-weight: bold; display: block; margin-top: 25px; transition: 0.3s; font-size: 1.1rem; }
+        .btn-wa { background: #25d366; color: white; }
+        .btn-wa:hover { background: #128c7e; transform: scale(1.02); }
+        .btn-test { background: var(--primary); color: #000; margin: 20px auto; width: fit-content; border-radius: 50px; }
+
+        /* Apps Grid */
+        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin-top: 50px; }
+        .app-item { background: #1f2937; padding: 25px; border-radius: 20px; text-align: center; border: 1px solid #374151; }
+        .app-item i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
+
+        footer { text-align: center; padding: 60px 20px; background: #0b0f1a; border-top: 1px solid #1f2937; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50px; text-align: center; line-height: 65px; font-size: 35px; z-index: 999; box-shadow: 0 10px 25px rgba(37,211,102,0.3); }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/212626869960" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/212626869960" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <header>
-    <div class="logo">ElectroYou <i class="fas fa-bolt"></i></div>
-    <div class="hero-sub">أفضل سيرفر IPTV في المغرب بضمان الثبات</div>
-    <p style="max-width: 700px; margin: auto; font-size: 1.1rem;">استمتع بأكثر من 15,000 قناة عالمية، ومكتبة ضخمة من الأفلام والمسلسلات بجودة 4K و Ultra HD بدون تقطيع نهائياً.</p>
+    <div class="logo-text">Electro<span>You</span></div>
+    <p class="hero-sub" style="color:var(--gold); font-weight:bold; font-size:1.2rem; margin-top:10px;">إستمتع بعالم من الترفيه في منزلك</p>
+    <p style="max-width: 800px; margin: 20px auto; color: #94a3b8;">+15,000 قناة مباشرة | +50,000 فيلم ومسلسل | جودة 4K حقيقية بدون تقطيع</p>
+    <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20نجرب%20سيرفر%20ElectroYou%20فابور" class="btn btn-test">طلب تجربة مجانية (24 ساعة) <i class="fas fa-gift"></i></a>
 </header>
 
 <div class="container">
     
-    <!-- Why Choose Us -->
-    <div class="features-grid">
-        <div class="feature-box">
-            <i class="fas fa-tv"></i>
-            <h4>قنوات 4K / UHD</h4>
-            <p>جميع القنوات الرياضية والترفيهية بأعلى جودة ممكنة في السوق.</p>
-        </div>
-        <div class="feature-box">
-            <i class="fas fa-server"></i>
-            <h4>سيرفرات ثابتة</h4>
-            <p>سيرفراتنا قوية جداً وتضمن لك مشاهدة المباريات الكبرى بدون لاغ أو تقطيع.</p>
-        </div>
-        <div class="feature-box">
-            <i class="fas fa-headset"></i>
-            <h4>دعم فني 24/7</h4>
-            <p>فريقنا معك دائماً على الواتساب للمساعدة في التفعيل وحل أي مشكل.</p>
-        </div>
+    <!-- Channels Brands -->
+    <div style="text-align: center; margin-bottom: 20px; color: #64748b; font-size: 0.9rem; font-weight: bold;">القنوات المتوفرة</div>
+    <div class="brands">
+        <span style="font-weight: bold; color: #fff;">beIN SPORTS</span>
+        <span style="font-weight: bold; color: #fff;">NETFLIX</span>
+        <span style="font-weight: bold; color: #fff;">SHAHID VIP</span>
+        <span style="font-weight: bold; color: #fff;">OSN</span>
+        <span style="font-weight: bold; color: #fff;">HBO</span>
     </div>
 
-    <!-- Test Free Section -->
-    <div class="test-section">
-        <h2><i class="fas fa-gift"></i> باغي تجرب عاد تشترك؟</h2>
-        <p>ElectroYou كتعطيك 24 ساعة تجربة فابور باش تأكد من الجودة ديالنا بنفسك.</p>
-        <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20نجرب%20سيرفر%20ElectroYou%20فابور%20لمدة%2024%20ساعة" class="btn-test">طلب تجربة مجانية الآن</a>
+    <!-- Features -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 60px;">
+        <div style="text-align: center;">
+            <i class="fas fa-rocket" style="font-size: 2rem; color: var(--primary);"></i>
+            <h3>تفعيل فوري</h3>
+            <p style="color: #94a3b8;">توصل بكود الاشتراك مباشرة بعد الدفع.</p>
+        </div>
+        <div style="text-align: center;">
+            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--primary);"></i>
+            <h3>ضمان 100%</h3>
+            <p style="color: #94a3b8;">نضمن لك ثبات الخدمة طيلة مدة الاشتراك.</p>
+        </div>
+        <div style="text-align: center;">
+            <i class="fas fa-mobile-alt" style="font-size: 2rem; color: var(--primary);"></i>
+            <h3>جميع الأجهزة</h3>
+            <p style="color: #94a3b8;">يشتغل على التلفاز، الهاتف، والبوكس أندرويد.</p>
+        </div>
     </div>
 
     <!-- Pricing -->
-    <h2 style="text-align:center; font-size: 2.5rem; margin-bottom: 40px;">باقات الإشتراك</h2>
     <div class="pricing">
         <div class="card">
             <h3>باقة 3 أشهر</h3>
-            <div class="price">99 <span>درهم</span></div>
-            <ul style="text-align: right; list-style: none; padding: 0;">
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> جميع القنوات (+12,000)</li>
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> مكتبة الأفلام والمسلسلات</li>
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> دعم فني طيلة المدة</li>
+            <div class="price"><span>DH</span> 99</div>
+            <ul style="text-align: right; list-style: none; padding: 0; color: #94a3b8;">
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> جميع القنوات الرياضية</li>
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> مكتبة الأفلام والمسلسلات</li>
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> جودة 4K / UHD / HD</li>
             </ul>
-            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%203%20أشهر%20بـ%2099%20درهم" class="btn-buy">إشترك الآن</a>
+            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%203%20أشهر" class="btn btn-wa">إشترك الآن <i class="fab fa-whatsapp"></i></a>
         </div>
 
-        <div class="card popular">
-            <h3>باقة 6 أشهر</h3>
-            <div class="price">199 <span>درهم</span></div>
-            <ul style="text-align: right; list-style: none; padding: 0;">
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> جميع القنوات الرياضية</li>
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> جودة 4K حقيقية</li>
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> تحديثات يومية للأفلام</li>
+        <div class="card featured">
+            <div class="badge">الأكثر طلباً</div>
+            <h3>باقة 12 شهر (سنة)</h3>
+            <div class="price"><span>DH</span> 299</div>
+            <ul style="text-align: right; list-style: none; padding: 0; color: #94a3b8;">
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> أفضل توفير للمال</li>
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> ثبات كلي في المباريات</li>
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> تحديثات يومية للمحتوى</li>
             </ul>
-            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%206%20أشهر%20بـ%20199%20درهم" class="btn-buy">إشترك الآن</a>
+            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%20سنة%20كاملة" class="btn btn-wa">إشترك الآن <i class="fab fa-whatsapp"></i></a>
         </div>
 
         <div class="card">
-            <h3>باقة سنة كاملة</h3>
-            <div class="price">299 <span>درهم</span></div>
-            <ul style="text-align: right; list-style: none; padding: 0;">
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> أفضل توفير (أقل من 25dh للشهر)</li>
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> ضمان كامل لمدة سنة</li>
-                <li><i class="fas fa-check" style="color:var(--primary)"></i> يشتغل على جميع الأجهزة</li>
+            <h3>باقة 6 أشهر</h3>
+            <div class="price"><span>DH</span> 199</div>
+            <ul style="text-align: right; list-style: none; padding: 0; color: #94a3b8;">
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> جميع القنوات العالمية</li>
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> دعم فني متميز</li>
+                <li><i class="fas fa-check-circle" style="color:var(--primary)"></i> جودة عالية بدون تقطيع</li>
             </ul>
-            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%2012%20شهر%20بـ%20299%20درهم" class="btn-buy">إشترك الآن</a>
+            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%206%20أشهر" class="btn btn-wa">إشترك الآن <i class="fab fa-whatsapp"></i></a>
         </div>
     </div>
 
-    <!-- Apps & Installation -->
-    <div class="apps-section">
-        <h2 style="font-size: 2rem;">التطبيقات التي ندعمها</h2>
-        <p>سيرفر ElectroYou يشتغل بامتياز على جميع تطبيقات الـ IPTV المشهورة:</p>
-        <div class="apps-grid">
-            <div class="app-card"><i class="fas fa-tv"></i><h4>IBO Player</h4></div>
-            <div class="app-card"><i class="fas fa-play"></i><h4>IBO Pro</h4></div>
-            <div class="app-card"><i class="fas fa-compact-disc"></i><h4>Bob Player</h4></div>
-            <div class="app-card"><i class="fas fa-mobile-alt"></i><h4>Smarters</h4></div>
-        </div>
+    <!-- Apps Support -->
+    <div class="apps-grid">
+        <div class="app-item"><i class="fas fa-tv"></i><h4>IBO Player</h4><p>تفعيل سريع ومستقر</p></div>
+        <div class="app-item"><i class="fas fa-play"></i><h4>Smarters Pro</h4><p>التطبيق الأكثر شهرة</p></div>
+        <div class="app-item"><i class="fas fa-compact-disc"></i><h4>Bob Player</h4><p>واجهة سهلة وأنيقة</p></div>
     </div>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 ElectroYou IPTV - أفضل خدمة IPTV في المغرب</p>
-    <p>WhatsApp: 0626869960</p>
+    <div class="logo-text" style="font-size: 1.5rem;">Electro<span>You</span></div>
+    <p>واتساب: 0626869960</p>
+    <p style="font-size: 0.8rem; color: #4b5563; margin-top: 20px;">&copy; 2026 جميع الحقوق محفوظة لـ ElectroYou IPTV المغرب.</p>
 </footer>
 
 </body>
