@@ -6,107 +6,136 @@
     <title>ElectroYou | IPTV MAROC Premium</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --primary: #ff4d00; --secondary: #ff8c00; --dark: #000000; }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f8f9fa; color: #333; margin: 0; padding: 0; }
+        :root { --primary: #ff4d00; --dark: #050810; --card: #111827; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 0; scroll-behavior: smooth; }
 
-        /* Navbar style fhal screenshot */
-        .navbar { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary); position: sticky; top: 0; z-index: 1000; }
-        .logo-box { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 1.4rem; color: #1a1a1a; text-decoration: none; }
-        .logo-box span { color: var(--primary); }
-        .nav-icons { display: flex; gap: 15px; }
-        .circle-icon { width: 40px; height: 40px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        /* Navbar style (Inspired by Screenshot 1) */
+        .navbar { 
+            background: white; padding: 12px 5%; display: flex; flex-direction: row-reverse; 
+            justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000;
+            border-bottom: 2px solid var(--primary); box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo { font-size: 1.5rem; font-weight: 900; color: #1a1a1a; text-decoration: none; }
+        .logo span { color: var(--primary); }
+        .nav-icons { display: flex; gap: 15px; align-items: center; }
+        .search-btn { width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
-        /* Hero Section with Orange Gradient */
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, #000 100%); color: white; padding: 60px 20px; text-align: center; }
-        .device-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 500px; margin: 0 auto 30px; }
-        .device-tag { background: white; color: #333; padding: 5px; border-radius: 5px; font-size: 0.7rem; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 4px; }
-        .hero h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 20px; text-transform: uppercase; }
+        /* Hero Section (Style Screenshot 1) */
+        header { 
+            padding: 140px 20px 80px; text-align: center; 
+            background: linear-gradient(135deg, #ff4d00 0%, #000 100%); color: white;
+        }
+        .device-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; max-width: 450px; margin: 0 auto 30px; }
+        .tag { background: white; color: #000; padding: 6px; border-radius: 6px; font-size: 0.7rem; font-weight: bold; }
+        .hero-title { font-size: 2.2rem; line-height: 1.2; text-transform: uppercase; margin-bottom: 25px; }
 
-        /* Feature Pill Buttons */
-        .pill { background: white; color: #333; padding: 15px 30px; border-radius: 50px; margin: 10px auto; width: fit-content; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .pill-feature { background: white; color: #1a1a1a; padding: 12px 25px; border-radius: 50px; margin: 10px auto; width: fit-content; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
-        /* Countdown Timer Section (1000141703.jpg) */
-        .promo-box { background: linear-gradient(to right, #ff4e50, #f9d423); margin: 20px; padding: 25px; border-radius: 15px; color: white; text-align: center; position: relative; }
-        .timer { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
-        .time-part { background: rgba(255,255,255,0.3); padding: 10px; border-radius: 10px; min-width: 60px; }
-        .time-part span { display: block; font-size: 1.5rem; font-weight: bold; }
+        .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
 
-        /* Guarantee Section (1000141705.jpg) */
-        .guarantee { background: #e31e24; color: white; padding: 50px 20px; text-align: center; margin-top: 40px; }
-        .shield-icon { font-size: 4rem; margin-bottom: 20px; }
+        /* Countdown Section (Screenshot 2) */
+        .promo-timer { 
+            background: linear-gradient(90deg, #ff416c, #ff4b2b); color: white; 
+            margin: 20px 0; padding: 30px; border-radius: 20px; text-align: center;
+        }
+        .timer-flex { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
+        .t-box { background: rgba(255,255,255,0.2); padding: 10px; border-radius: 12px; min-width: 70px; }
+        .t-box b { display: block; font-size: 1.8rem; }
 
-        /* Pricing Card */
-        .price-card { background: white; margin: 20px; padding: 30px; border-radius: 20px; border: 1px solid #ddd; position: relative; }
-        .price-tag { font-size: 3rem; font-weight: bold; color: #1a1a1a; }
-        .price-tag span { font-size: 1.2rem; color: #666; }
+        /* Support Banner (Your Original Photo) */
+        .img-section { text-align: center; margin: 50px 0; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .img-section img { max-width: 100%; border-radius: 15px; }
 
-        /* WhatsApp Floating */
-        .wa-float { position: fixed; bottom: 20px; right: 20px; z-index: 1000; text-align: center; }
-        .wa-btn { background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-decoration: none; }
-        .wa-label { background: white; color: black; font-size: 0.7rem; padding: 2px 8px; border-radius: 5px; margin-top: 5px; font-weight: bold; display: block; }
+        /* Pricing (Style Screenshot 2) */
+        .price-card { 
+            background: white; padding: 40px; border-radius: 25px; text-align: center; 
+            border: 1px solid #eee; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .price-val { font-size: 3.5rem; font-weight: 800; color: #1a1a1a; }
+        .price-val span { font-size: 1.2rem; color: #666; }
+        .btn-order { background: #25d366; color: white; padding: 18px; display: block; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-top: 20px; }
+
+        /* Guarantee (Screenshot 3) */
+        .refund-policy { background: #e31e24; color: white; padding: 60px 20px; text-align: center; margin-top: 40px; }
+        .refund-policy i { font-size: 4rem; margin-bottom: 20px; }
+
+        footer { text-align: center; padding: 50px; background: #050810; color: #666; }
+        .wa-float { position: fixed; bottom: 30px; left: 30px; z-index: 2000; text-align: center; }
+        .wa-icon { background: #25d366; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; color: white; box-shadow: 0 5px 20px rgba(0,0,0,0.3); text-decoration: none; }
     </style>
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="nav-icons"><i class="fas fa-bars" style="font-size: 1.5rem; color: #999;"></i></div>
-    <div class="circle-icon"><i class="fas fa-search"></i></div>
-    <a href="#" class="logo-box">ELECTRO<span>YOU</span></a>
+    <a href="#" class="logo">ELECTRO<span>YOU</span></a>
+    <div class="nav-icons">
+        <div class="search-btn"><i class="fas fa-search"></i></div>
+        <i class="fas fa-bars" style="font-size: 1.4rem; color: #333;"></i>
+    </div>
 </nav>
 
-<section class="hero">
+<header id="home">
     <div class="device-grid">
-        <div class="device-tag"><i class="fab fa-apple"></i> iOS</div>
-        <div class="device-tag"><i class="fab fa-android"></i> Android</div>
-        <div class="device-tag"><i class="fas fa-tv"></i> Smart TV</div>
-        <div class="device-tag"><i class="fab fa-windows"></i> Windows</div>
-        <div class="device-tag">Firestick</div>
-        <div class="device-tag">MagBox</div>
-        <div class="device-tag">Xbox</div>
-        <div class="device-tag">WebPlayer</div>
+        <div class="tag">Firestick</div><div class="tag">Smart TV</div><div class="tag">Android</div><div class="tag">iOS</div>
+        <div class="tag">MagBox</div><div class="tag">Windows</div><div class="tag">Xbox</div><div class="tag">Web</div>
+    </div>
+    <h1 class="hero-title">ELECTROYOU COMPATIBLE AVEC TOUS LES APPAREILS</h1>
+    <div class="pill-feature">Serveur Stable</div>
+    <div class="pill-feature">20 000 chaînes TV en direct</div>
+</header>
+
+<div class="container">
+    <!-- Countdown Section -->
+    <div class="promo-timer">
+        <h3><i class="fas fa-bolt"></i> عرض محدود لفترة وجيزة!</h3>
+        <p>استفد من خصومات 2026 قبل نهاية العداد</p>
+        <div class="timer-flex">
+            <div class="t-box"><b>03</b>ساعة</div>
+            <div class="t-box"><b>59</b>دقيقة</div>
+            <div class="t-box"><b>19</b>ثانية</div>
+        </div>
     </div>
 
-    <h1>ELECTROYOU COMPATIBLE AVEC TOUS LES APPAREILS</h1>
-    <p>Profitez de notre service à des prix abordables au Maroc.</p>
+    <!-- Your App Support Image -->
+    <div class="img-section">
+        <h2>ندعم جميع تطبيقات الـ IPTV</h2>
+        <img src="1000044651.jpg" alt="Supported Players">
+    </div>
 
-    <div class="pill">Serveur Stable</div>
-    <div class="pill">Sécurité et Confidentialité</div>
-    <div class="pill">20 000 chaînes TV en direct</div>
-</section>
+    <!-- Pricing -->
+    <div class="price-card">
+        <h3 style="color: var(--primary);">الإشتراك الأكثر طلباً</h3>
+        <div class="price-val">299 <span>DH / سنة</span></div>
+        <ul style="list-style: none; padding: 0; line-height: 2.5; text-align: right;">
+            <li><i class="fas fa-check-circle" style="color: green;"></i> جميع القنوات العالمية بجودة 4K</li>
+            <li><i class="fas fa-check-circle" style="color: green;"></i> مكتبة ضخمة من الأفلام والمسلسلات</li>
+            <li><i class="fas fa-check-circle" style="color: green;"></i> تحديثات تلقائية يومية</li>
+        </ul>
+        <a href="https://wa.me/212626869960" class="btn-order">إشترك الآن عبر واتساب</a>
+    </div>
 
-<div class="promo-box">
-    <i class="fas fa-clock" style="font-size: 1.5rem;"></i>
-    <h3>Promotion Flash Limitée!</h3>
-    <p>Les prix reviendront à la normale après la fin du compte à rebours.</p>
-    <div class="timer">
-        <div class="time-part"><span>03</span> HEURES</div>
-        <div class="time-part"><span>59</span> MINS</div>
-        <div class="time-part"><span>19</span> SECS</div>
+    <!-- Your UI Image -->
+    <div class="img-section">
+        <h2>تطبيقاتنا سهلة وبسيطة</h2>
+        <img src="1000134763.jpg" style="border: 4px solid #ff4d00;" alt="UI App">
     </div>
 </div>
 
-<div class="price-card">
-    <h3>Mensuel</h3>
-    <div class="price-tag">59 <span>DH/mois</span></div>
-    <p>Parfait pour essayer notre service</p>
-    <hr>
-    <ul style="list-style: none; padding: 0; text-align: right; line-height: 2;">
-        <li><i class="fas fa-check" style="color: green;"></i> 20,000+ Chaînes TV</li>
-        <li><i class="fas fa-check" style="color: green;"></i> Qualité Full HD & 4K</li>
-        <li><i class="fas fa-check" style="color: green;"></i> Sans coupures</li>
-    </ul>
-</div>
-
-<section class="guarantee">
-    <div class="shield-icon"><i class="fas fa-shield-alt"></i></div>
-    <h2>Notre Garantie de Remboursement de 30 Jours</h2>
-    <p>Si vous n'êtes pas satisfait, nous vous rembourserons intégralement. Pas de tracas, pas de questions posées.</p>
+<section class="refund-policy">
+    <i class="fas fa-user-shield"></i>
+    <h2>ضمان استرجاع الأموال لمدة 30 يومًا</h2>
+    <p style="max-width: 800px; margin: auto;">نحن واثقون من جودة سيرفراتنا، وإذا لم تكن راضيًا، فسنقوم برد أموالك بالكامل بدون تعقيدات.</p>
 </section>
 
 <div class="wa-float">
-    <a href="https://wa.me/212626869960" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
-    <span class="wa-label">Test 24H</span>
+    <a href="https://wa.me/212626869960" class="wa-icon"><i class="fab fa-whatsapp"></i></a>
+    <div style="background: white; border-radius: 5px; font-size: 0.7rem; font-weight: bold; margin-top: 5px; padding: 2px;">Test 24H</div>
 </div>
+
+<footer>
+    <img src="1000133134.jpg" style="width: 50px; border-radius: 50%; margin-bottom: 10px;">
+    <p>ELECTROYOU IPTV &copy; 2026 - Premium Streaming</p>
+</footer>
 
 </body>
 </html>
