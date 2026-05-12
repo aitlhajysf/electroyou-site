@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ElectroYou IPTV</title>
+<title>ElectroYou IPTV PRO</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
 
@@ -17,75 +16,65 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
+font-family:'Cairo',sans-serif;
 }
 
 body{
-background:#000814;
+background:#020617;
 color:white;
 overflow-x:hidden;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
+/* HEADER */
 header{
 position:fixed;
 top:0;
-left:0;
+right:0;
 width:100%;
-padding:22px 7%;
+padding:18px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-z-index:1000;
-background:rgba(0,0,0,0.55);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(12px);
+z-index:999;
 border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
 font-size:34px;
-font-weight:800;
+font-weight:900;
 color:#00aeff;
-letter-spacing:1px;
 }
 
-.logo span{
-color:white;
-}
+.logo span{color:white;}
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:30px;
+margin-right:22px;
+font-weight:700;
 font-size:15px;
-font-weight:600;
 transition:0.3s;
 }
 
-nav a:hover{
-color:#00aeff;
-}
+nav a:hover{color:#00aeff;}
 
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
 align-items:center;
 padding:0 7%;
 background:
-linear-gradient(to right,
-rgba(0,0,0,0.95) 20%,
-rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1800&auto=format&fit=crop');
-
+linear-gradient(to left, rgba(0,0,0,0.92), rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1800&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 }
 
 .hero-content{
-max-width:700px;
+max-width:750px;
 }
 
 .badge{
@@ -94,378 +83,260 @@ background:#00aeff;
 padding:8px 18px;
 border-radius:50px;
 font-size:13px;
-font-weight:700;
-margin-bottom:25px;
-}
-
-.hero-content h1{
-font-size:78px;
-font-weight:800;
-line-height:1.1;
+font-weight:900;
 margin-bottom:20px;
 }
 
-.hero-content h1 span{
-color:#00aeff;
-text-shadow:0 0 25px rgba(0,174,255,0.7);
+.hero h1{
+font-size:70px;
+line-height:1.1;
+font-weight:900;
+margin-bottom:20px;
 }
 
-.hero-content p{
+.hero h1 span{
+color:#00aeff;
+text-shadow:0 0 20px rgba(0,174,255,0.7);
+}
+
+.hero p{
 font-size:20px;
 line-height:1.9;
-color:#d1d5db;
-margin-bottom:35px;
+color:#cbd5e1;
+margin-bottom:30px;
 }
 
-.hero-buttons{
+/* BUTTONS */
+.buttons{
 display:flex;
-gap:20px;
+gap:15px;
 flex-wrap:wrap;
 }
 
 .btn{
-padding:16px 35px;
+padding:15px 30px;
 border-radius:12px;
 text-decoration:none;
 font-size:16px;
-font-weight:700;
+font-weight:800;
+transition:0.3s;
 display:flex;
 align-items:center;
 gap:10px;
-transition:0.3s;
 }
 
-.btn-primary{
+.btn-blue{
 background:#00aeff;
 color:white;
-box-shadow:0 0 25px rgba(0,174,255,0.45);
+box-shadow:0 0 25px rgba(0,174,255,0.4);
 }
 
-.btn-whatsapp{
+.btn-green{
 background:#25D366;
 color:white;
 box-shadow:0 0 25px rgba(37,211,102,0.35);
 }
 
-.btn:hover{
-transform:scale(1.05);
-}
+.btn:hover{transform:scale(1.05);}
 
+/* SECTION */
 .section{
 padding:90px 7%;
 }
 
-.section-title{
-font-size:42px;
-font-weight:800;
-margin-bottom:40px;
+.title{
+text-align:center;
+font-size:45px;
+margin-bottom:50px;
+font-weight:900;
 }
 
-.section-title span{
-color:#00aeff;
-}
+.title span{color:#00aeff;}
 
+/* PRICING */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+gap:25px;
 }
 
 .card{
-background:#07111f;
+background:#0f172a;
 border-radius:22px;
-overflow:hidden;
-transition:0.4s;
+padding:30px;
+text-align:center;
 border:1px solid rgba(255,255,255,0.05);
+transition:0.3s;
+position:relative;
+overflow:hidden;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 35px rgba(0,174,255,0.25);
 border-color:#00aeff;
+box-shadow:0 0 30px rgba(0,174,255,0.2);
 }
 
-.card-top{
-height:170px;
-background:
-linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)),
-url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop');
-
-background-size:cover;
-background-position:center;
-}
-
-.card-content{
-padding:30px;
-}
-
-.card h3{
-font-size:30px;
-margin-bottom:15px;
-}
+.card h3{font-size:28px;}
 
 .price{
-font-size:58px;
-font-weight:800;
+font-size:60px;
 color:#00aeff;
-margin-bottom:15px;
+font-weight:900;
+margin:15px 0;
 }
 
-.card p{
-color:#d1d5db;
-line-height:1.8;
-}
+.card p{color:#cbd5e1;line-height:1.8;}
 
-.netflix-row{
+/* FEATURES */
+.features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:20px;
-}
-
-.netflix-item{
-position:relative;
-overflow:hidden;
-border-radius:18px;
-height:320px;
-cursor:pointer;
-transition:0.4s;
-}
-
-.netflix-item img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:0.5s;
-}
-
-.netflix-item:hover img{
-transform:scale(1.1);
-}
-
-.overlay{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-padding:25px;
-background:linear-gradient(to top,
-rgba(0,0,0,0.95),
-transparent);
-}
-
-.overlay h3{
-font-size:24px;
-margin-bottom:10px;
-}
-
-.overlay p{
-font-size:14px;
-color:#d1d5db;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
 margin-top:40px;
 }
 
 .feature{
-background:#07111f;
-padding:35px;
-border-radius:22px;
+background:#0b1220;
+padding:25px;
+border-radius:18px;
 text-align:center;
 border:1px solid rgba(255,255,255,0.05);
 transition:0.3s;
 }
 
 .feature:hover{
-transform:translateY(-8px);
-background:#0b1629;
+transform:translateY(-6px);
+background:#0f1a2f;
 }
 
 .feature i{
-font-size:55px;
+font-size:45px;
 color:#00aeff;
-margin-bottom:20px;
-}
-
-.feature h3{
 margin-bottom:15px;
-font-size:23px;
 }
 
-.feature p{
-line-height:1.8;
-color:#cbd5e1;
-}
+.feature h3{font-size:20px;margin-bottom:10px;}
+.feature p{color:#cbd5e1;line-height:1.7;font-size:14px;}
 
-.players{
+/* TRUST */
+.trust{
 display:flex;
 justify-content:center;
-gap:18px;
 flex-wrap:wrap;
+gap:15px;
 margin-top:40px;
 }
 
-.player{
-background:#0b1629;
-padding:16px 24px;
+.badge-box{
+background:#0f172a;
+padding:15px 20px;
 border-radius:14px;
-font-weight:600;
 border:1px solid rgba(255,255,255,0.05);
-transition:0.3s;
+font-weight:700;
 }
 
-.player:hover{
-background:#00aeff;
+/* HOW IT WORKS */
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.contact{
-margin-top:80px;
-background:
-linear-gradient(145deg,#07111f,#020617);
-
-padding:70px 25px;
-border-radius:28px;
+.step{
+background:#0b1220;
+padding:25px;
+border-radius:18px;
 text-align:center;
-border:1px solid rgba(255,255,255,0.05);
 }
 
-.contact h2{
-font-size:48px;
-margin-bottom:20px;
+.step i{
+font-size:40px;
+color:#00aeff;
+margin-bottom:10px;
 }
 
-.contact p{
-font-size:20px;
-color:#d1d5db;
-margin-bottom:35px;
-}
-
+/* WHATSAPP FLOAT */
 .whatsapp{
 position:fixed;
-bottom:25px;
-right:25px;
-width:72px;
-height:72px;
+bottom:20px;
+left:20px;
+width:70px;
+height:70px;
 background:#25D366;
 border-radius:50%;
 display:flex;
-justify-content:center;
 align-items:center;
-color:white;
+justify-content:center;
 font-size:38px;
-text-decoration:none;
-z-index:999;
-box-shadow:0 0 30px rgba(37,211,102,0.5);
+color:white;
+box-shadow:0 0 25px rgba(37,211,102,0.5);
 animation:float 2s infinite;
+text-decoration:none;
 }
 
 @keyframes float{
-
-0%{
-transform:translateY(0);
+0%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0);}
 }
 
-50%{
-transform:translateY(-8px);
-}
-
-100%{
-transform:translateY(0);
-}
-
-}
-
+/* FOOTER */
 footer{
-padding:35px;
 text-align:center;
-margin-top:70px;
-color:#94a3b8;
+padding:30px;
 border-top:1px solid rgba(255,255,255,0.05);
+color:#94a3b8;
 }
 
 @media(max-width:768px){
-
-.hero{
-text-align:center;
-justify-content:center;
-}
-
-.hero-content h1{
-font-size:50px;
-}
-
-.hero-content p{
-font-size:17px;
-}
-
-.hero-buttons{
-justify-content:center;
-}
-
-nav{
-display:none;
-}
-
-.section-title{
-font-size:34px;
-}
-
+.hero h1{font-size:45px;}
+nav{display:none;}
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">
-Electro<span>You</span>
-</div>
+<div class="logo">Electro<span>You</span></div>
 
 <nav>
-<a href="#home">Accueil</a>
-<a href="#plans">Offres</a>
-<a href="#movies">Films</a>
-<a href="#contact">Contact</a>
+<a href="#prices">العروض</a>
+<a href="#features">المميزات</a>
+<a href="#how">كيف تعمل</a>
+<a href="#contact">تواصل</a>
 </nav>
 
 </header>
 
-<section class="hero" id="home">
+<section class="hero">
 
 <div class="hero-content">
 
-<div class="badge">
-PREMIUM IPTV 4K
-</div>
+<div class="badge">🔥 IPTV PREMIUM 4K</div>
 
 <h1>
-Le Futur Du <span>Streaming</span>
+تجربة <span>Netflix IPTV</span><br>
+بأقوى جودة
 </h1>
 
 <p>
-Profitez des meilleurs matchs, films, séries et chaînes premium avec une expérience style Netflix ultra rapide et stable.
+مشاهدة المباريات + الأفلام + السلاسل بدون تقطيع وبأقوى سيرفرات مستقرة 24/7
 </p>
 
-<div class="hero-buttons">
+<div class="buttons">
 
-<a class="btn btn-primary" href="#plans">
-
-<i class="fa-solid fa-play"></i>
-Commencer
-
+<a class="btn btn-blue" href="#prices">
+<i class="fa-solid fa-play"></i> العروض
 </a>
 
-<a class="btn btn-whatsapp"
-href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%20IPTV">
-
-<i class="fab fa-whatsapp"></i>
-WhatsApp
-
+<a class="btn btn-green"
+href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV">
+<i class="fab fa-whatsapp"></i> جرب الآن
 </a>
 
 </div>
@@ -474,212 +345,112 @@ WhatsApp
 
 </section>
 
-<section class="section" id="plans">
+<section class="section" id="prices">
 
-<h2 class="section-title">
-Nos <span>Offres</span>
-</h2>
+<h2 class="title">عروض <span>الاشتراك</span></h2>
 
 <div class="cards">
 
 <div class="card">
-
-<div class="card-top"></div>
-
-<div class="card-content">
-
-<h3>3 Mois</h3>
-
-<div class="price">
-99DH
-</div>
-
-<p>
-IPTV premium avec tous les matchs et chaînes internationales.
-</p>
-
-</div>
-
+<h3>3 أشهر</h3>
+<div class="price">99DH</div>
+<p>جميع القنوات + مباريات + أفلام</p>
 </div>
 
 <div class="card">
-
-<div class="card-top"></div>
-
-<div class="card-content">
-
-<h3>6 Mois</h3>
-
-<div class="price">
-199DH
-</div>
-
-<p>
-Qualité ultra stable avec films et séries illimités.
-</p>
-
-</div>
-
+<h3>6 أشهر</h3>
+<div class="price">199DH</div>
+<p>أفضل جودة + استقرار قوي</p>
 </div>
 
 <div class="card">
-
-<div class="card-top"></div>
-
-<div class="card-content">
-
-<h3>12 Mois</h3>
-
-<div class="price">
-299DH
-</div>
-
-<p>
-La meilleure offre avec support rapide et mise à jour continue.
-</p>
-
-</div>
-
+<h3>12 شهر</h3>
+<div class="price">299DH</div>
+<p>عرض VIP + دعم 24/7</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="movies">
+<section class="section" id="features">
 
-<h2 class="section-title">
-Films & <span>Séries</span>
-</h2>
-
-<div class="netflix-row">
-
-<div class="netflix-item">
-
-<img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200&auto=format&fit=crop">
-
-<div class="overlay">
-
-<h3>Films Premium</h3>
-
-<p>
-Les derniers films en Full HD et 4K.
-</p>
-
-</div>
-
-</div>
-
-<div class="netflix-item">
-
-<img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=1200&auto=format&fit=crop">
-
-<div class="overlay">
-
-<h3>Live Football</h3>
-
-<p>
-Champions League, Liga, Premier League...
-</p>
-
-</div>
-
-</div>
-
-<div class="netflix-item">
-
-<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
-
-<div class="overlay">
-
-<h3>Séries Netflix</h3>
-
-<p>
-Séries populaires mises à jour chaque jour.
-</p>
-
-</div>
-
-</div>
-
-</div>
+<h2 class="title">لماذا <span>نحن؟</span></h2>
 
 <div class="features">
 
 <div class="feature">
-
 <i class="fa-solid fa-tv"></i>
-
-<h3>+10000 Chaînes</h3>
-
-<p>
-Chaînes arabes et internationales en HD / FHD / 4K.
-</p>
-
+<h3>+10000 قناة</h3>
+<p>جميع القنوات العالمية والعربية</p>
 </div>
 
 <div class="feature">
-
-<i class="fa-solid fa-rocket"></i>
-
-<h3>Ultra Rapide</h3>
-
-<p>
-Serveurs puissants et streaming sans coupure.
-</p>
-
+<i class="fa-solid fa-bolt"></i>
+<h3>بدون تقطيع</h3>
+<p>سيرفرات قوية وسريعة جداً</p>
 </div>
 
 <div class="feature">
-
 <i class="fa-solid fa-film"></i>
-
-<h3>Netflix Style</h3>
-
-<p>
-Design premium moderne inspiré des plateformes de streaming.
-</p>
-
+<h3>أفلام وسلاسل</h3>
+<p>Netflix + Movies + Series</p>
 </div>
 
 <div class="feature">
-
-<i class="fa-solid fa-mobile-screen"></i>
-
-<h3>Compatible</h3>
-
-<p>
-Fonctionne sur Smart TV, Android, iPhone et TV Box.
-</p>
-
+<i class="fa-solid fa-mobile"></i>
+<h3>كل الأجهزة</h3>
+<p>TV / Android / iPhone</p>
 </div>
 
 </div>
 
-<div class="players">
+<div class="trust">
 
-<div class="player">Smarters Player</div>
-
-<div class="player">IBO Player</div>
-
-<div class="player">IBO Player Pro</div>
-
-<div class="player">HOT IPTV</div>
+<div class="badge-box">⭐ +500 زبون</div>
+<div class="badge-box">🔒 ضمان الخدمة</div>
+<div class="badge-box">⚡ دعم سريع</div>
 
 </div>
 
-<div class="contact" id="contact">
+</section>
 
-<h2>
-Contactez-Nous
-</h2>
+<section class="section" id="how">
 
-<p>
-Commande rapide via WhatsApp 24/7
-</p>
+<h2 class="title">كيف <span>تعمل الخدمة</span></h2>
 
-<a class="btn btn-whatsapp"
-href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%20IPTV">
+<div class="steps">
+
+<div class="step">
+<i class="fa-solid fa-message"></i>
+<h3>1 - تواصل</h3>
+<p>تضغط على واتساب</p>
+</div>
+
+<div class="step">
+<i class="fa-solid fa-key"></i>
+<h3>2 - تستلم الكود</h3>
+<p>نرسل لك الاشتراك</p>
+</div>
+
+<div class="step">
+<i class="fa-solid fa-play"></i>
+<h3>3 - تشغيل</h3>
+<p>تدخل للكود وتشاهد مباشرة</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2 class="title">تواصل <span>معنا</span></h2>
+
+<div style="text-align:center">
+
+<a class="btn btn-green"
+href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV%20الآن">
 
 <i class="fab fa-whatsapp"></i>
 0626869960
@@ -691,13 +462,11 @@ href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%20IPT
 </section>
 
 <footer>
-
-© 2026 ElectroYou IPTV - Tous droits réservés
-
+© 2026 ElectroYou IPTV - PRO Version
 </footer>
 
 <a class="whatsapp"
-href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%20IPTV">
+href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV">
 
 <i class="fab fa-whatsapp"></i>
 
