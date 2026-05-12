@@ -28,20 +28,20 @@
             text-decoration: none; font-weight: bold; border-radius: 50px;
             display: inline-block; margin-top: 10px; transition: 0.3s; font-size: 1.1rem;
         }
-        .btn-test:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--primary); }
 
-        /* Pricing */
+        /* Pricing Cards */
         .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .card { background: #1e293b; padding: 25px; border-radius: 20px; text-align: center; border: 1px solid #334155; transition: 0.3s; }
         .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .price { font-size: 2.2rem; font-weight: bold; margin: 15px 0; color: #fff; }
+        .price { font-size: 2.2rem; font-weight: bold; margin: 15px 0; }
         .price span { font-size: 1rem; color: #94a3b8; }
         .btn-buy { background: #25d366; color: white; padding: 12px; text-decoration: none; border-radius: 10px; display: block; font-weight: bold; margin-top: 15px; }
 
-        /* Apps Section */
-        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 20px; margin-top: 30px; justify-items: center; }
-        .app-item img { width: 70px; height: 70px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-        .app-item p { font-size: 0.8rem; margin-top: 10px; color: #94a3b8; }
+        /* Apps Grid Fix */
+        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 20px; margin-top: 30px; justify-items: center; }
+        .app-item { text-align: center; background: #1e293b; padding: 20px; border-radius: 15px; width: 100px; }
+        .app-item i { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
+        .app-item p { font-size: 0.8rem; margin: 0; color: #fff; }
         
         footer { text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #334155; color: #64748b; }
     </style>
@@ -50,35 +50,33 @@
 
 <header>
     <div class="logo">ElectroYou <i class="fas fa-play-circle"></i></div>
-    <p>أقوى سيرفر IPTV في المغرب - جودة وثبات</p>
+    <p>أقوى سيرفر IPTV في المغرب - جودة وثبات 4K</p>
 </header>
 
 <div class="container">
     <!-- Test 24H -->
     <div class="test-free">
-        <h2><i class="fas fa-gift"></i> عرض خاص: تجربة مجانية</h2>
-        <p>جرب الخدمة ديالنا فابور لمدة 24 ساعة قبل ما تخلص!</p>
-        <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20نجرب%20سيرفر%20ElectroYou%20فابور%20لمدة%2024%20ساعة" class="btn-test">طلب تجربة 24H فابور <i class="fab fa-whatsapp"></i></a>
+        <h2><i class="fas fa-gift"></i> تجربة مجانية 24 ساعة</h2>
+        <p>جرب الخدمة ديالنا فابور قبل ما تخلص!</p>
+        <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20نجرب%20سيرفر%20ElectroYou%20فابور" class="btn-test">طلب تجربة الآن <i class="fab fa-whatsapp"></i></a>
     </div>
 
-    <!-- Subscriptions -->
-    <h2 style="text-align:center; margin-bottom:30px;">إختر باقتك المفضلة</h2>
+    <!-- Pricing -->
     <div class="pricing">
         <div class="card">
             <h3>3 أشهر</h3>
             <div class="price">99 <span>درهم</span></div>
-            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%203%20أشهر%20بـ%2099%20درهم" class="btn-buy">اشتراك الآن <i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%203%20أشهر" class="btn-buy">اشتراك الآن <i class="fab fa-whatsapp"></i></a>
         </div>
         <div class="card" style="border: 2px solid var(--primary);">
-            <div style="background:var(--primary); color:black; font-size:0.7rem; font-weight:bold; padding:3px 10px; border-radius:5px; display:inline-block;">الأكثر طلباً</div>
             <h3>6 أشهر</h3>
             <div class="price">199 <span>درهم</span></div>
-            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%206%20أشهر%20بـ%20199%20درهم" class="btn-buy">اشتراك الآن <i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%206%20أشهر" class="btn-buy">اشتراك الآن <i class="fab fa-whatsapp"></i></a>
         </div>
         <div class="card">
             <h3>12 شهر</h3>
             <div class="price">299 <span>درهم</span></div>
-            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%2012%20شهر%20بـ%20299%20درهم" class="btn-buy">اشتراك الآن <i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/212626869960?text=سلام،%20بغيت%20اشتراك%2012%20شهر" class="btn-buy">اشتراك الآن <i class="fab fa-whatsapp"></i></a>
         </div>
     </div>
 
@@ -86,20 +84,20 @@
     <h2 style="text-align:center; margin-top:60px; color:var(--primary);">التطبيقات المدعومة</h2>
     <div class="apps-grid">
         <div class="app-item">
-            <img src="https://iboplayer.com/wp-content/uploads/2022/01/cropped-logo-192x192.png" alt="IBO">
+            <i class="fas fa-tv"></i>
             <p>IBO Player</p>
         </div>
         <div class="app-item">
-            <img src="https://iboproplayer.app/wp-content/uploads/2023/10/logo-ibo-pro.png" alt="IBO Pro">
+            <i class="fas fa-play-circle"></i>
             <p>IBO Pro</p>
         </div>
         <div class="app-item">
-            <img src="https://bob-player.com/images/logo.png" alt="Bob">
+            <i class="fas fa-compact-disc"></i>
             <p>Bob Player</p>
         </div>
         <div class="app-item">
-            <img src="https://www.iptvsmarters.com/wp-content/uploads/2018/11/iptv-smarters-pro-logo.png" style="background:white; padding:5px;" alt="Smarters">
-            <p>IPTV Smarters</p>
+            <i class="fas fa-mobile-alt"></i>
+            <p>Smarters</p>
         </div>
     </div>
 </div>
