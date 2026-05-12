@@ -8,6 +8,7 @@
 <title>ElectroYou IPTV PRO</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
@@ -88,7 +89,7 @@ margin-bottom:20px;
 }
 
 .hero h1{
-font-size:70px;
+font-size:68px;
 line-height:1.1;
 font-weight:900;
 margin-bottom:20px;
@@ -96,7 +97,6 @@ margin-bottom:20px;
 
 .hero h1 span{
 color:#00aeff;
-text-shadow:0 0 20px rgba(0,174,255,0.7);
 }
 
 .hero p{
@@ -128,13 +128,11 @@ gap:10px;
 .btn-blue{
 background:#00aeff;
 color:white;
-box-shadow:0 0 25px rgba(0,174,255,0.4);
 }
 
 .btn-green{
 background:#25D366;
 color:white;
-box-shadow:0 0 25px rgba(37,211,102,0.35);
 }
 
 .btn:hover{transform:scale(1.05);}
@@ -153,7 +151,7 @@ font-weight:900;
 
 .title span{color:#00aeff;}
 
-/* PRICING */
+/* PRICING (NO IMAGES = CLEAN PRO) */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -163,7 +161,7 @@ gap:25px;
 .card{
 background:#0f172a;
 border-radius:22px;
-padding:30px;
+padding:35px;
 text-align:center;
 border:1px solid rgba(255,255,255,0.05);
 transition:0.3s;
@@ -174,21 +172,49 @@ overflow:hidden;
 .card:hover{
 transform:translateY(-10px);
 border-color:#00aeff;
-box-shadow:0 0 30px rgba(0,174,255,0.2);
+box-shadow:0 0 30px rgba(0,174,255,0.25);
 }
 
-.card h3{font-size:28px;}
+.card h3{
+font-size:30px;
+margin-bottom:10px;
+}
 
 .price{
-font-size:60px;
-color:#00aeff;
+font-size:62px;
 font-weight:900;
+color:#00aeff;
 margin:15px 0;
 }
 
-.card p{color:#cbd5e1;line-height:1.8;}
+.card p{
+color:#cbd5e1;
+line-height:1.8;
+}
 
-/* FEATURES */
+/* FREE TEST */
+.test{
+margin-top:30px;
+padding:25px;
+text-align:center;
+background:linear-gradient(145deg,#0b1220,#020617);
+border:1px solid rgba(0,174,255,0.3);
+border-radius:20px;
+}
+
+.test h2{
+color:#00aeff;
+font-size:28px;
+font-weight:900;
+}
+
+.test p{
+color:#cbd5e1;
+margin-top:10px;
+line-height:1.7;
+}
+
+/* FEATURES WITH CLEAN IMAGES */
 .features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -198,45 +224,44 @@ margin-top:40px;
 
 .feature{
 background:#0b1220;
-padding:25px;
 border-radius:18px;
-text-align:center;
-border:1px solid rgba(255,255,255,0.05);
+overflow:hidden;
 transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
 }
 
 .feature:hover{
 transform:translateY(-6px);
-background:#0f1a2f;
+}
+
+.feature img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+.feature-content{
+padding:20px;
+text-align:center;
 }
 
 .feature i{
-font-size:45px;
+font-size:40px;
 color:#00aeff;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
-.feature h3{font-size:20px;margin-bottom:10px;}
-.feature p{color:#cbd5e1;line-height:1.7;font-size:14px;}
-
-/* TRUST */
-.trust{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
-margin-top:40px;
+.feature h3{
+font-size:20px;
+margin-bottom:8px;
 }
 
-.badge-box{
-background:#0f172a;
-padding:15px 20px;
-border-radius:14px;
-border:1px solid rgba(255,255,255,0.05);
-font-weight:700;
+.feature p{
+color:#cbd5e1;
+font-size:14px;
 }
 
-/* HOW IT WORKS */
+/* HOW */
 .steps{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -250,13 +275,7 @@ border-radius:18px;
 text-align:center;
 }
 
-.step i{
-font-size:40px;
-color:#00aeff;
-margin-bottom:10px;
-}
-
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -270,9 +289,9 @@ align-items:center;
 justify-content:center;
 font-size:38px;
 color:white;
-box-shadow:0 0 25px rgba(37,211,102,0.5);
-animation:float 2s infinite;
 text-decoration:none;
+animation:float 2s infinite;
+box-shadow:0 0 25px rgba(37,211,102,0.5);
 }
 
 @keyframes float{
@@ -281,17 +300,11 @@ text-decoration:none;
 100%{transform:translateY(0);}
 }
 
-/* FOOTER */
 footer{
 text-align:center;
 padding:30px;
-border-top:1px solid rgba(255,255,255,0.05);
 color:#94a3b8;
-}
-
-@media(max-width:768px){
-.hero h1{font-size:45px;}
-nav{display:none;}
+border-top:1px solid rgba(255,255,255,0.05);
 }
 
 </style>
@@ -320,24 +333,20 @@ nav{display:none;}
 <div class="badge">🔥 IPTV PREMIUM 4K</div>
 
 <h1>
-تجربة <span>Netflix IPTV</span><br>
-بأقوى جودة
+أفضل <span>IPTV</span><br>
+بدون تقطيع
 </h1>
 
 <p>
-مشاهدة المباريات + الأفلام + السلاسل بدون تقطيع وبأقوى سيرفرات مستقرة 24/7
+قنوات رياضية + أفلام + سلاسل + جودة عالية + سيرفرات مستقرة 24/7
 </p>
 
 <div class="buttons">
 
-<a class="btn btn-blue" href="#prices">
-<i class="fa-solid fa-play"></i> العروض
-</a>
+<a class="btn btn-blue" href="#prices">العروض</a>
 
 <a class="btn btn-green"
-href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV">
-<i class="fab fa-whatsapp"></i> جرب الآن
-</a>
+href="https://wa.me/212626869960?text=بغيت%20IPTV">واتساب</a>
 
 </div>
 
@@ -366,8 +375,20 @@ href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV">
 <div class="card">
 <h3>12 شهر</h3>
 <div class="price">299DH</div>
-<p>عرض VIP + دعم 24/7</p>
+<p>أفضل عرض + دعم 24/7</p>
 </div>
+
+</div>
+
+<div class="test">
+
+<h2>🔥 تجربة مجانية 24 ساعة</h2>
+<p>جرب الخدمة قبل الشراء بدون أي التزام</p>
+
+<a class="btn btn-green"
+href="https://wa.me/212626869960?text=بغيت%2024h%20test">
+طلب التجربة
+</a>
 
 </div>
 
@@ -375,29 +396,51 @@ href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV">
 
 <section class="section" id="features">
 
-<h2 class="title">لماذا <span>نحن؟</span></h2>
+<h2 class="title">لماذا <span>نحن</span> ؟</h2>
 
 <div class="features">
 
 <div class="feature">
+
+<img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=800&auto=format&fit=crop">
+
+<div class="feature-content">
 <i class="fa-solid fa-tv"></i>
 <h3>+10000 قناة</h3>
-<p>جميع القنوات العالمية والعربية</p>
+<p>كل القنوات العالمية</p>
+</div>
+
 </div>
 
 <div class="feature">
-<i class="fa-solid fa-bolt"></i>
-<h3>بدون تقطيع</h3>
-<p>سيرفرات قوية وسريعة جداً</p>
-</div>
 
-<div class="feature">
+<img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=800&auto=format&fit=crop">
+
+<div class="feature-content">
 <i class="fa-solid fa-film"></i>
 <h3>أفلام وسلاسل</h3>
-<p>Netflix + Movies + Series</p>
+<p>Netflix Style محتوى</p>
+</div>
+
 </div>
 
 <div class="feature">
+
+<img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=800&auto=format&fit=crop">
+
+<div class="feature-content">
+<i class="fa-solid fa-futbol"></i>
+<h3>مباريات مباشرة</h3>
+<p>بدون تقطيع</p>
+</div>
+
+</div>
+
+<div class="feature">
+
+<img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=800&auto=format&fit=crop">
+
+<div class="feature-content">
 <i class="fa-solid fa-mobile"></i>
 <h3>كل الأجهزة</h3>
 <p>TV / Android / iPhone</p>
@@ -405,39 +448,19 @@ href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV">
 
 </div>
 
-<div class="trust">
-
-<div class="badge-box">⭐ +500 زبون</div>
-<div class="badge-box">🔒 ضمان الخدمة</div>
-<div class="badge-box">⚡ دعم سريع</div>
-
 </div>
 
 </section>
 
 <section class="section" id="how">
 
-<h2 class="title">كيف <span>تعمل الخدمة</span></h2>
+<h2 class="title">كيف <span>تعمل</span></h2>
 
 <div class="steps">
 
-<div class="step">
-<i class="fa-solid fa-message"></i>
-<h3>1 - تواصل</h3>
-<p>تضغط على واتساب</p>
-</div>
-
-<div class="step">
-<i class="fa-solid fa-key"></i>
-<h3>2 - تستلم الكود</h3>
-<p>نرسل لك الاشتراك</p>
-</div>
-
-<div class="step">
-<i class="fa-solid fa-play"></i>
-<h3>3 - تشغيل</h3>
-<p>تدخل للكود وتشاهد مباشرة</p>
-</div>
+<div class="step">1 - تواصل عبر واتساب</div>
+<div class="step">2 - تستلم الكود</div>
+<div class="step">3 - تشغيل مباشر</div>
 
 </div>
 
@@ -450,9 +473,8 @@ href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV">
 <div style="text-align:center">
 
 <a class="btn btn-green"
-href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV%20الآن">
+href="https://wa.me/212626869960?text=بغيت%20IPTV">
 
-<i class="fab fa-whatsapp"></i>
 0626869960
 
 </a>
@@ -462,11 +484,11 @@ href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV%20الآن"
 </section>
 
 <footer>
-© 2026 ElectroYou IPTV - PRO Version
+© 2026 ElectroYou IPTV PRO
 </footer>
 
 <a class="whatsapp"
-href="https://wa.me/212626869960?text=بغيت%20اشتراك%20IPTV">
+href="https://wa.me/212626869960?text=بغيت%20IPTV">
 
 <i class="fab fa-whatsapp"></i>
 
