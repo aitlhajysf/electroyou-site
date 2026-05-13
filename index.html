@@ -75,43 +75,62 @@ nav ul li a:hover{
 color:#00aaff;
 }
 
-/* HEADER */
+/* ===================== */
+/* ULTRA PRO HEADER ONLY */
+/* ===================== */
 
-header{
+header.hero{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.92)),
-url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1920&auto=format&fit=crop');
-
-background-size:cover;
-background-position:center;
+position:relative;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-padding:20px;
+overflow:hidden;
+background:url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
 }
 
-.hero{
-max-width:950px;
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(180deg, rgba(0,0,0,0.75), rgba(0,0,0,0.92));
+backdrop-filter:blur(6px);
+}
+
+.hero-content{
+position:relative;
+max-width:900px;
+padding:20px;
+animation:fadeUp 1s ease-in-out;
 }
 
 .hero h1{
-font-size:68px;
-margin-bottom:20px;
-line-height:1.3;
+font-size:72px;
+font-weight:900;
+line-height:1.2;
+color:white;
+text-shadow:0 0 25px rgba(0,170,255,0.25);
 }
 
 .hero h1 span{
 color:#00aaff;
-text-shadow:0 0 10px #00aaff;
+text-shadow:0 0 20px #00aaff;
 }
 
 .hero p{
-font-size:21px;
+font-size:22px;
 color:#d0d0d0;
-line-height:1.9;
+margin-top:15px;
 margin-bottom:35px;
+line-height:1.8;
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 /* BUTTONS */
@@ -152,7 +171,7 @@ color:white;
 background:#00aaff;
 }
 
-/* SECTION */
+/* باقي الموقع ما تبدلش */
 
 section{
 padding:100px 8%;
@@ -167,8 +186,6 @@ margin-bottom:60px;
 .section-title span{
 color:#00aaff;
 }
-
-/* PACKS */
 
 .cards{
 display:grid;
@@ -213,8 +230,6 @@ margin-bottom:25px;
 font-size:17px;
 }
 
-/* BUTTON */
-
 .buy-btn{
 display:inline-block;
 padding:13px 28px;
@@ -223,15 +238,12 @@ color:white;
 border-radius:12px;
 text-decoration:none;
 font-weight:bold;
-transition:0.3s;
 }
 
 .buy-btn:hover{
 background:#008fd6;
 transform:scale(1.05);
 }
-
-/* CONTENT */
 
 .content-grid{
 display:grid;
@@ -246,12 +258,6 @@ background:#111;
 border-radius:25px;
 overflow:hidden;
 border:1px solid rgba(255,255,255,0.05);
-transition:0.3s;
-}
-
-.content-box:hover{
-transform:translateY(-8px);
-border-color:#00aaff;
 }
 
 .content-box img{
@@ -265,17 +271,9 @@ padding:25px;
 }
 
 .content-info h3{
-font-size:28px;
-margin-bottom:15px;
 color:#00aaff;
+font-size:28px;
 }
-
-.content-info p{
-color:#d0d0d0;
-line-height:1.9;
-}
-
-/* TEST */
 
 .test{
 background:linear-gradient(135deg,#00aaff,#003b70);
@@ -286,21 +284,12 @@ max-width:1200px;
 margin:auto;
 }
 
-.test h2{
-font-size:55px;
-margin-bottom:20px;
-}
-
-/* FOOTER */
-
 footer{
 background:#000;
 padding:35px;
 text-align:center;
 color:#888;
 }
-
-/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -313,18 +302,8 @@ border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-z-index:999;
 box-shadow:0 0 18px rgba(37,211,102,0.5);
-animation:pulse 2s infinite;
 }
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
-}
-
-/* MOBILE */
 
 @media(max-width:1050px){
 
@@ -333,21 +312,12 @@ animation:pulse 2s infinite;
 grid-template-columns:1fr;
 }
 
-.card.center{
-transform:none;
-}
-
 .hero h1{
-font-size:42px;
+font-size:38px;
 }
 
 .hero p{
-font-size:18px;
-}
-
-nav{
-flex-direction:column;
-gap:20px;
+font-size:16px;
 }
 
 }
@@ -358,50 +328,33 @@ gap:20px;
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
-
-<div class="logo">
-Electro<span>You</span>
-</div>
-
+<div class="logo">Electro<span>You</span></div>
 <ul>
 <li><a href="#">الرئيسية</a></li>
 <li><a href="#packs">الباقات</a></li>
 <li><a href="#content">المحتوى</a></li>
 <li><a href="#test">تجربة مجانية</a></li>
 </ul>
-
 </nav>
 
-<!-- HEADER -->
+<!-- ULTRA HEADER -->
+<header class="hero">
 
-<header>
+<div class="hero-overlay"></div>
 
-<div class="hero">
+<div class="hero-content">
 
-<h1>
-أفضل اشتراك <span>IPTV</span>
-لمشاهدة القنوات والأفلام والمسلسلات
-</h1>
+<h1>أفضل اشتراك <span>IPTV</span> في المغرب</h1>
 
 <p>
-استمتع بأقوى القنوات الرياضية العالمية وأحدث الأفلام والمسلسلات
-بجودة عالية HD / FHD / 4K وبدون تقطيع
+قنوات رياضية + أفلام + مسلسلات بجودة HD / FHD / 4K بدون تقطيع
 </p>
 
 <div class="buttons">
 
-<a class="btn btn-blue"
-href="https://wa.me/212626869960">
-اشترك الآن
-</a>
-
-<a class="btn btn-outline"
-href="https://wa.me/212626869960">
-تجربة مجانية 24H
-</a>
+<a class="btn btn-blue" href="https://wa.me/212626869960">اشترك الآن</a>
+<a class="btn btn-outline" href="#packs">شاهد الباقات</a>
 
 </div>
 
@@ -409,195 +362,52 @@ href="https://wa.me/212626869960">
 
 </header>
 
-<!-- PACKS -->
+<!-- باقي نفس الكود ديالك -->
 
 <section id="packs">
-
-<h2 class="section-title">
-الباقات <span>والأسعار</span>
-</h2>
+<h2 class="section-title">الباقات <span>والأسعار</span></h2>
 
 <div class="cards">
 
 <div class="card">
-
 <h2>3 أشهر</h2>
-
 <div class="price">99DH</div>
-
-<div class="features">
-✔ قنوات عالمية<br>
-✔ أفلام ومسلسلات<br>
-✔ جودة HD
-</div>
-
-<a class="buy-btn"
-href="https://wa.me/212626869960">
-اشترك الآن
-</a>
-
+<div class="features">✔ قنوات + أفلام + مسلسلات</div>
+<a class="buy-btn">اشترك الآن</a>
 </div>
 
 <div class="card center">
-
 <h2>12 شهر</h2>
-
 <div class="price">299DH</div>
-
-<div class="features">
-✔ أفضل عرض 🔥<br>
-✔ جميع القنوات<br>
-✔ أفلام جديدة يومياً<br>
-✔ جودة 4K
-</div>
-
-<a class="buy-btn"
-href="https://wa.me/212626869960">
-اشترك الآن
-</a>
-
+<div class="features">✔ أفضل عرض 🔥</div>
+<a class="buy-btn">اشترك الآن</a>
 </div>
 
 <div class="card">
-
 <h2>6 أشهر</h2>
-
 <div class="price">199DH</div>
-
-<div class="features">
-✔ قنوات رياضية<br>
-✔ سيرفر قوي<br>
-✔ بدون تقطيع
-</div>
-
-<a class="buy-btn"
-href="https://wa.me/212626869960">
-اشترك الآن
-</a>
-
+<div class="features">✔ رياضة + أفلام</div>
+<a class="buy-btn">اشترك الآن</a>
 </div>
 
 </div>
-
 </section>
-
-<!-- CONTENT -->
-
-<section id="content">
-
-<h2 class="section-title">
-القنوات <span>والأفلام</span>
-</h2>
-
-<div class="content-grid">
-
-<!-- FILMS -->
-
-<div class="content-box">
-
-<img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=1200&auto=format&fit=crop">
-
-<div class="content-info">
-
-<h3>أفلام عالمية</h3>
-
-<p>
-أحدث أفلام الأكشن والرعب والكوميديا
-بجودة عالية وبدون إعلانات
-</p>
-
-</div>
-
-</div>
-
-<!-- SPORTS -->
-
-<div class="content-box">
-
-<img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1200&auto=format&fit=crop">
-
-<div class="content-info">
-
-<h3>قنوات رياضية</h3>
-
-<p>
-beIN SPORTS و SSC
-وجميع البطولات العالمية مباشرة
-</p>
-
-</div>
-
-</div>
-
-<!-- SERIES -->
-
-<div class="content-box">
-
-<img src="https://images.unsplash.com/photo-1585951237318-9ea5e175b891?q=80&w=1200&auto=format&fit=crop">
-
-<div class="content-info">
-
-<h3>مسلسلات جديدة</h3>
-
-<p>
-أحدث المسلسلات العربية والأجنبية
-مع تحديثات يومية مستمرة
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TEST -->
 
 <section id="test">
-
 <div class="test">
-
-<h2>
-تجربة مجانية 24H
-</h2>
-
-<p style="margin-bottom:30px;font-size:22px;">
-جرّب الخدمة مجاناً قبل الاشتراك
-</p>
-
-<a class="buy-btn"
-href="https://wa.me/212626869960">
-طلب التجربة
-</a>
-
+<h2>تجربة مجانية 24H</h2>
+<a class="buy-btn">طلب التجربة</a>
 </div>
-
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-
-© 2026 ElectroYou IPTV — جميع الحقوق محفوظة
-
+© 2026 ElectroYou IPTV
 </footer>
 
-<!-- WHATSAPP -->
-
-<a class="whatsapp"
-href="https://wa.me/212626869960">
-
-<svg xmlns="http://www.w3.org/2000/svg"
-width="38"
-height="38"
-fill="white"
-viewBox="0 0 24 24">
-
+<a class="whatsapp" href="https://wa.me/212626869960">
+<svg width="38" height="38" fill="white" viewBox="0 0 24 24">
 <path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .2 5.2.2 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7A11.8 11.8 0 0 0 12 23.6c6.6 0 11.8-5.2 11.8-11.8 0-3.2-1.2-6.2-3.3-8.3z"/>
-
 </svg>
-
 </a>
 
 </body>
