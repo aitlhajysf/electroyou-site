@@ -133,10 +133,10 @@ border:2px solid #008cff;
 color:white;
 }
 
-/* SECTION */
+/* PACKS */
 
 section{
-padding:100px 8%;
+padding:90px 8%;
 }
 
 .section-title{
@@ -149,60 +149,30 @@ margin-bottom:60px;
 color:#008cff;
 }
 
-/* PACKS */
-
 .cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
 max-width:1200px;
 margin:auto;
-align-items:stretch;
 }
-
-/* CARD */
 
 .card{
 background:#101010;
 padding:40px 25px;
 border-radius:25px;
 text-align:center;
-border:1px solid rgba(255,255,255,0.05);
 transition:0.4s;
-position:relative;
 }
 
 .card:hover{
 transform:translateY(-10px);
 }
 
-/* CENTER CARD (12 MONTHS) */
-
 .card.center{
-background:linear-gradient(180deg,#111,#000);
-transform:scale(1.08);
 border:2px solid #008cff;
-z-index:2;
+transform:scale(1.08);
 }
-
-.card.center:hover{
-transform:scale(1.1) translateY(-10px);
-}
-
-/* BADGE */
-
-.card::before{
-content:"عرض";
-position:absolute;
-top:15px;
-left:15px;
-background:#008cff;
-padding:6px 14px;
-font-size:12px;
-border-radius:8px;
-}
-
-/* PRICE */
 
 .price{
 font-size:55px;
@@ -211,20 +181,10 @@ color:#008cff;
 margin:15px 0;
 }
 
-/* FEATURES */
-
 .features{
 line-height:2;
 color:#d5d5d5;
 margin-bottom:25px;
-}
-
-/* FEATURES GRID */
-
-.features-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
 }
 
 /* TEST */
@@ -238,17 +198,12 @@ max-width:1100px;
 margin:auto;
 }
 
-.test h2{
-font-size:50px;
-margin-bottom:15px;
-}
-
-/* WHATSAPP */
+/* WHATSAPP RIGHT SIDE */
 
 .whatsapp{
 position:fixed;
 bottom:25px;
-left:25px;
+right:25px;   /* 🔥 هنا فليمين */
 width:65px;
 height:65px;
 background:#25D366;
@@ -257,6 +212,14 @@ display:flex;
 align-items:center;
 justify-content:center;
 z-index:999;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
 }
 
 /* MOBILE */
@@ -283,7 +246,6 @@ font-size:40px;
 <body>
 
 <!-- NAVBAR -->
-
 <nav>
 <div class="logo">Electro<span>You</span></div>
 
@@ -295,69 +257,41 @@ font-size:40px;
 </nav>
 
 <!-- HEADER -->
-
 <header>
 <div class="hero">
-
-<h1>
-أفضل اشتراك <span>IPTV</span> في المغرب
-</h1>
-
-<p>
-مشاهدة القنوات + الأفلام + المسلسلات بجودة عالية بدون تقطيع
-</p>
+<h1>أفضل اشتراك <span>IPTV</span></h1>
+<p>مشاهدة القنوات + الأفلام + المسلسلات بجودة عالية بدون تقطيع</p>
 
 <div class="buttons">
 <a class="btn btn-blue" href="https://wa.me/212626869960">اشترك الآن</a>
 <a class="btn btn-outline" href="https://wa.me/212626869960">تجربة 24H</a>
 </div>
-
 </div>
 </header>
 
 <!-- PACKS -->
-
 <section id="packs">
 
 <h2 class="section-title">الباقات <span>والأسعار</span></h2>
 
 <div class="cards">
 
-<!-- LEFT -->
 <div class="card">
 <h2>3 أشهر</h2>
 <div class="price">99DH</div>
-<div class="features">
-✔ قنوات عالمية<br>
-✔ أفلام ومسلسلات<br>
-✔ جودة HD
-</div>
-<a class="btn btn-blue" href="https://wa.me/212626869960">اطلب</a>
+<div class="features">✔ قنوات + أفلام<br>✔ جودة HD</div>
 </div>
 
-<!-- CENTER (12 MONTHS) -->
 <div class="card center">
 <h2>12 شهر</h2>
 <div class="price">299DH</div>
-<div class="features">
-✔ أفضل عرض 🔥<br>
-✔ كل القنوات<br>
-✔ 4K + بدون تقطيع<br>
-✔ تحديث يومي
-</div>
-<a class="btn btn-blue" href="https://wa.me/212626869960">اطلب الآن</a>
+<div class="features">✔ أفضل عرض 🔥<br>✔ كل القنوات<br>✔ 4K</div>
 </div>
 
-<!-- RIGHT -->
 <div class="card">
 <h2>6 أشهر</h2>
 <div class="price">199DH</div>
-<div class="features">
-✔ رياضة + أفلام<br>
-✔ سيرفر قوي<br>
-✔ جودة عالية
-</div>
-<a class="btn btn-blue" href="https://wa.me/212626869960">اطلب</a>
+<div class="features">✔ رياضة + أفلام<br>✔ سيرفر قوي</div>
 </div>
 
 </div>
@@ -365,27 +299,22 @@ font-size:40px;
 </section>
 
 <!-- TEST -->
-
 <section id="test">
 
 <div class="test">
-
-<h2>تجربة مجانية 24 ساعة</h2>
-
-<p>جرب الخدمة قبل الاشتراك</p>
-
+<h2>تجربة مجانية 24H</h2>
 <a class="btn btn-outline" href="https://wa.me/212626869960">طلب التجربة</a>
-
 </div>
 
 </section>
 
 <!-- WHATSAPP -->
-
 <a class="whatsapp" href="https://wa.me/212626869960">
+
 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" viewBox="0 0 24 24">
 <path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .2 5.2.2 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7A11.8 11.8 0 0 0 12 23.6c6.6 0 11.8-5.2 11.8-11.8 0-3.2-1.2-6.2-3.3-8.3z"/>
 </svg>
+
 </a>
 
 </body>
