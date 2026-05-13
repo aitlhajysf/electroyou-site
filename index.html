@@ -37,7 +37,7 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background:rgba(0,0,0,0.4);
+background:rgba(0,0,0,0.5);
 backdrop-filter:blur(10px);
 z-index:999;
 direction:ltr;
@@ -50,12 +50,13 @@ color:white;
 }
 
 .logo span{
-color:#008cff;
+color:#00aaff;
+text-shadow:0 0 10px #00aaff;
 }
 
 nav ul{
 display:flex;
-gap:35px;
+gap:30px;
 list-style:none;
 direction:rtl;
 }
@@ -68,7 +69,7 @@ transition:0.3s;
 }
 
 nav ul li a:hover{
-color:#008cff;
+color:#00aaff;
 }
 
 /* HEADER */
@@ -93,25 +94,26 @@ max-width:900px;
 
 .hero h1{
 font-size:65px;
-line-height:1.3;
 margin-bottom:20px;
 }
 
 .hero h1 span{
-color:#008cff;
+color:#00aaff;
+text-shadow:0 0 15px #00aaff;
 }
 
 .hero p{
 font-size:20px;
-line-height:1.8;
-color:#d0d0d0;
+color:#ccc;
 margin-bottom:30px;
 }
 
+/* BUTTONS */
+
 .buttons{
 display:flex;
-justify-content:center;
 gap:20px;
+justify-content:center;
 flex-wrap:wrap;
 }
 
@@ -121,16 +123,22 @@ border-radius:12px;
 text-decoration:none;
 font-size:18px;
 font-weight:bold;
+transition:0.3s;
 }
 
 .btn-blue{
-background:#008cff;
+background:#00aaff;
 color:white;
+box-shadow:0 0 15px #00aaff;
 }
 
 .btn-outline{
-border:2px solid #008cff;
+border:2px solid #00aaff;
 color:white;
+}
+
+.btn-outline:hover{
+background:#00aaff;
 }
 
 /* PACKS */
@@ -146,8 +154,10 @@ margin-bottom:60px;
 }
 
 .section-title span{
-color:#008cff;
+color:#00aaff;
 }
+
+/* CARDS */
 
 .cards{
 display:grid;
@@ -157,68 +167,94 @@ max-width:1200px;
 margin:auto;
 }
 
+/* CARD */
+
 .card{
-background:#101010;
+background:#111;
 padding:40px 25px;
 border-radius:25px;
 text-align:center;
-transition:0.4s;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.1);
 }
 
 .card:hover{
 transform:translateY(-10px);
+box-shadow:0 0 25px #00aaff;
 }
 
+/* CENTER CARD */
+
 .card.center{
-border:2px solid #008cff;
 transform:scale(1.08);
+border:2px solid #00aaff;
+box-shadow:0 0 30px #00aaff;
 }
 
 .price{
 font-size:55px;
 font-weight:900;
-color:#008cff;
+color:#00aaff;
 margin:15px 0;
+text-shadow:0 0 10px #00aaff;
 }
 
 .features{
 line-height:2;
-color:#d5d5d5;
-margin-bottom:25px;
+color:#ddd;
+margin-bottom:20px;
+}
+
+/* BUY BUTTON */
+
+.buy-btn{
+display:inline-block;
+padding:12px 25px;
+background:#00aaff;
+color:white;
+border-radius:10px;
+text-decoration:none;
+box-shadow:0 0 15px #00aaff;
+transition:0.3s;
+}
+
+.buy-btn:hover{
+transform:scale(1.05);
 }
 
 /* TEST */
 
 .test{
-background:linear-gradient(135deg,#008cff,#003b70);
+background:linear-gradient(135deg,#00aaff,#003b70);
 padding:70px 25px;
 border-radius:30px;
 text-align:center;
 max-width:1100px;
 margin:auto;
+box-shadow:0 0 25px #00aaff;
 }
 
-/* WHATSAPP RIGHT SIDE */
+/* WHATSAPP NEON RIGHT */
 
 .whatsapp{
 position:fixed;
 bottom:25px;
-right:25px;   /* 🔥 هنا فليمين */
-width:65px;
-height:65px;
+right:25px;
+width:70px;
+height:70px;
 background:#25D366;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 z-index:999;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-animation:pulse 2s infinite;
+box-shadow:0 0 20px #25D366, 0 0 50px #25D366;
+animation:pulse 1.8s infinite;
 }
 
 @keyframes pulse{
 0%{transform:scale(1);}
-50%{transform:scale(1.1);}
+50%{transform:scale(1.15);}
 100%{transform:scale(1);}
 }
 
@@ -258,15 +294,17 @@ font-size:40px;
 
 <!-- HEADER -->
 <header>
+
 <div class="hero">
 <h1>أفضل اشتراك <span>IPTV</span></h1>
-<p>مشاهدة القنوات + الأفلام + المسلسلات بجودة عالية بدون تقطيع</p>
+<p>مشاهدة القنوات + الأفلام + المسلسلات بدون تقطيع</p>
 
 <div class="buttons">
 <a class="btn btn-blue" href="https://wa.me/212626869960">اشترك الآن</a>
 <a class="btn btn-outline" href="https://wa.me/212626869960">تجربة 24H</a>
 </div>
 </div>
+
 </header>
 
 <!-- PACKS -->
@@ -276,22 +314,33 @@ font-size:40px;
 
 <div class="cards">
 
+<!-- 3 MONTHS -->
 <div class="card">
 <h2>3 أشهر</h2>
 <div class="price">99DH</div>
-<div class="features">✔ قنوات + أفلام<br>✔ جودة HD</div>
+<div class="features">✔ قنوات + أفلام<br>✔ HD</div>
+<a class="buy-btn" href="https://wa.me/212626869960">اشترك الآن</a>
 </div>
 
+<!-- 12 MONTH CENTER -->
 <div class="card center">
 <h2>12 شهر</h2>
 <div class="price">299DH</div>
-<div class="features">✔ أفضل عرض 🔥<br>✔ كل القنوات<br>✔ 4K</div>
+<div class="features">
+✔ أفضل عرض 🔥<br>
+✔ كل القنوات<br>
+✔ 4K بدون تقطيع<br>
+✔ تحديث يومي
+</div>
+<a class="buy-btn" href="https://wa.me/212626869960">اشترك الآن</a>
 </div>
 
+<!-- 6 MONTHS -->
 <div class="card">
 <h2>6 أشهر</h2>
 <div class="price">199DH</div>
 <div class="features">✔ رياضة + أفلام<br>✔ سيرفر قوي</div>
+<a class="buy-btn" href="https://wa.me/212626869960">اشترك الآن</a>
 </div>
 
 </div>
@@ -303,7 +352,7 @@ font-size:40px;
 
 <div class="test">
 <h2>تجربة مجانية 24H</h2>
-<a class="btn btn-outline" href="https://wa.me/212626869960">طلب التجربة</a>
+<a class="buy-btn" href="https://wa.me/212626869960">طلب التجربة</a>
 </div>
 
 </section>
@@ -311,7 +360,7 @@ font-size:40px;
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/212626869960">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="white" viewBox="0 0 24 24">
 <path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .2 5.2.2 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7A11.8 11.8 0 0 0 12 23.6c6.6 0 11.8-5.2 11.8-11.8 0-3.2-1.2-6.2-3.3-8.3z"/>
 </svg>
 
