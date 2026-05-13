@@ -2,14 +2,15 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ElectroYou IPTV PRO</title>
+<title>ElectroYou IPTV</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2504/2504947.png">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,293 +19,326 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Cairo',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#020617;
+background:#050505;
 color:white;
 overflow-x:hidden;
 }
 
-/* HEADER */
-header{
-position:fixed;
-top:0;
-right:0;
-width:100%;
-padding:18px 7%;
+/* NAVBAR */
+
+nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(12px);
+padding:20px 8%;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
 z-index:999;
-border-bottom:1px solid rgba(255,255,255,0.05);
+direction:ltr;
 }
 
 .logo{
 font-size:34px;
 font-weight:900;
-color:#00aeff;
+color:white;
 }
 
-.logo span{color:white;}
+.logo span{
+color:#008cff;
+}
 
-nav a{
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+direction:rtl;
+}
+
+nav ul li a{
 color:white;
 text-decoration:none;
-margin-right:22px;
-font-weight:700;
-font-size:15px;
+font-size:18px;
 transition:0.3s;
 }
 
-nav a:hover{color:#00aeff;}
+nav ul li a:hover{
+color:#008cff;
+}
 
-/* HERO */
-.hero{
+/* HEADER */
+
+header{
 height:100vh;
-display:flex;
-align-items:center;
-padding:0 7%;
 background:
-linear-gradient(to left, rgba(0,0,0,0.92), rgba(0,0,0,0.4)),
-url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1800&auto=format&fit=crop');
+linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.95)),
+url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1920&auto=format&fit=crop');
+
 background-size:cover;
 background-position:center;
-}
-
-.hero-content{
-max-width:750px;
-}
-
-.badge{
-display:inline-block;
-background:#00aeff;
-padding:8px 18px;
-border-radius:50px;
-font-size:13px;
-font-weight:900;
-margin-bottom:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
 .hero h1{
-font-size:68px;
-line-height:1.1;
-font-weight:900;
-margin-bottom:20px;
+font-size:75px;
+max-width:1000px;
+line-height:1.3;
+margin-bottom:25px;
 }
 
 .hero h1 span{
-color:#00aeff;
+color:#008cff;
 }
 
 .hero p{
-font-size:20px;
+font-size:22px;
+max-width:850px;
 line-height:1.9;
-color:#cbd5e1;
-margin-bottom:30px;
+color:#d0d0d0;
+margin:auto;
+margin-bottom:40px;
 }
 
 /* BUTTONS */
+
 .buttons{
 display:flex;
-gap:15px;
+justify-content:center;
+gap:20px;
 flex-wrap:wrap;
 }
 
 .btn{
-padding:15px 30px;
-border-radius:12px;
+padding:16px 35px;
+border-radius:14px;
 text-decoration:none;
-font-size:16px;
-font-weight:800;
-transition:0.3s;
-display:flex;
-align-items:center;
-gap:10px;
+font-size:18px;
+font-weight:bold;
+transition:0.4s;
 }
 
 .btn-blue{
-background:#00aeff;
+background:#008cff;
 color:white;
 }
 
-.btn-green{
-background:#25D366;
+.btn-blue:hover{
+background:#0072d1;
+transform:translateY(-5px);
+}
+
+.btn-outline{
+border:2px solid #008cff;
 color:white;
 }
 
-.btn:hover{transform:scale(1.05);}
+.btn-outline:hover{
+background:#008cff;
+}
 
 /* SECTION */
-.section{
-padding:90px 7%;
+
+section{
+padding:100px 8%;
 }
 
-.title{
+.section-title{
 text-align:center;
-font-size:45px;
-margin-bottom:50px;
-font-weight:900;
+font-size:50px;
+margin-bottom:70px;
 }
 
-.title span{color:#00aeff;}
+.section-title span{
+color:#008cff;
+}
 
-/* PRICING (NO IMAGES = CLEAN PRO) */
+/* PACKS */
+
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+max-width:1400px;
+margin:auto;
 }
 
 .card{
-background:#0f172a;
-border-radius:22px;
-padding:35px;
+background:#101010;
+padding:45px 35px;
+border-radius:28px;
 text-align:center;
-border:1px solid rgba(255,255,255,0.05);
-transition:0.3s;
+transition:0.4s;
 position:relative;
 overflow:hidden;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.card::before{
+content:"الأفضل";
+position:absolute;
+top:20px;
+left:-40px;
+background:#008cff;
+padding:8px 50px;
+transform:rotate(-45deg);
+font-size:12px;
+font-weight:bold;
 }
 
 .card:hover{
 transform:translateY(-10px);
-border-color:#00aeff;
-box-shadow:0 0 30px rgba(0,174,255,0.25);
+box-shadow:0 0 40px rgba(0,140,255,0.25);
 }
 
-.card h3{
-font-size:30px;
-margin-bottom:10px;
+.card h2{
+font-size:40px;
+margin-bottom:15px;
 }
 
 .price{
-font-size:62px;
+font-size:65px;
 font-weight:900;
-color:#00aeff;
-margin:15px 0;
+color:#008cff;
+margin-bottom:20px;
 }
 
-.card p{
-color:#cbd5e1;
-line-height:1.8;
-}
-
-/* FREE TEST */
-.test{
-margin-top:30px;
-padding:25px;
-text-align:center;
-background:linear-gradient(145deg,#0b1220,#020617);
-border:1px solid rgba(0,174,255,0.3);
-border-radius:20px;
-}
-
-.test h2{
-color:#00aeff;
-font-size:28px;
-font-weight:900;
-}
-
-.test p{
-color:#cbd5e1;
-margin-top:10px;
-line-height:1.7;
-}
-
-/* FEATURES WITH CLEAN IMAGES */
 .features{
+line-height:2.1;
+font-size:17px;
+color:#d5d5d5;
+margin-bottom:30px;
+}
+
+/* FEATURES */
+
+.features-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
-margin-top:40px;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+max-width:1400px;
+margin:auto;
 }
 
 .feature{
-background:#0b1220;
-border-radius:18px;
-overflow:hidden;
-transition:0.3s;
-border:1px solid rgba(255,255,255,0.05);
+background:#101010;
+padding:40px 30px;
+border-radius:24px;
+text-align:center;
+transition:0.4s;
 }
 
 .feature:hover{
-transform:translateY(-6px);
-}
-
-.feature img{
-width:100%;
-height:160px;
-object-fit:cover;
-}
-
-.feature-content{
-padding:20px;
-text-align:center;
-}
-
-.feature i{
-font-size:40px;
-color:#00aeff;
-margin-bottom:10px;
+transform:translateY(-8px);
+background:#141414;
 }
 
 .feature h3{
-font-size:20px;
-margin-bottom:8px;
+font-size:28px;
+margin-bottom:18px;
+color:#008cff;
 }
 
 .feature p{
-color:#cbd5e1;
-font-size:14px;
+line-height:1.9;
+color:#d0d0d0;
 }
 
-/* HOW */
-.steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+/* TEST */
 
-.step{
-background:#0b1220;
-padding:25px;
-border-radius:18px;
+.test{
+background:linear-gradient(135deg,#008cff,#003b70);
+padding:80px 30px;
+border-radius:35px;
 text-align:center;
+max-width:1200px;
+margin:auto;
+}
+
+.test h2{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.test p{
+font-size:22px;
+margin-bottom:35px;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+padding:40px;
+text-align:center;
+color:#999;
 }
 
 /* WHATSAPP */
+
 .whatsapp{
 position:fixed;
-bottom:20px;
-left:20px;
-width:70px;
-height:70px;
+bottom:25px;
+right:25px;
+width:72px;
+height:72px;
 background:#25D366;
 border-radius:50%;
 display:flex;
-align-items:center;
 justify-content:center;
-font-size:38px;
-color:white;
-text-decoration:none;
-animation:float 2s infinite;
-box-shadow:0 0 25px rgba(37,211,102,0.5);
+align-items:center;
+z-index:999;
+box-shadow:0 0 25px rgba(0,0,0,0.5);
+animation:pulse 2s infinite;
 }
 
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-8px);}
-100%{transform:translateY(0);}
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
 }
 
-footer{
-text-align:center;
-padding:30px;
-color:#94a3b8;
-border-top:1px solid rgba(255,255,255,0.05);
+/* MOBILE */
+
+@media(max-width:1100px){
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.features-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
 }
 
 </style>
@@ -313,184 +347,232 @@ border-top:1px solid rgba(255,255,255,0.05);
 
 <body>
 
-<header>
-
-<div class="logo">Electro<span>You</span></div>
+<!-- NAVBAR -->
 
 <nav>
-<a href="#prices">العروض</a>
-<a href="#features">المميزات</a>
-<a href="#how">كيف تعمل</a>
-<a href="#contact">تواصل</a>
+
+<div class="logo">
+Electro<span>You</span>
+</div>
+
+<ul>
+<li><a href="#">الرئيسية</a></li>
+<li><a href="#packs">الباقات</a></li>
+<li><a href="#features">المميزات</a></li>
+<li><a href="#test">تجربة مجانية</a></li>
+</ul>
+
 </nav>
 
-</header>
+<!-- HEADER -->
 
-<section class="hero">
+<header>
 
-<div class="hero-content">
-
-<div class="badge">🔥 IPTV PREMIUM 4K</div>
+<div class="hero">
 
 <h1>
-أفضل <span>IPTV</span><br>
-بدون تقطيع
+أفضل اشتراك <span>IPTV</span>
+لمشاهدة المباريات والأفلام والمسلسلات
 </h1>
 
 <p>
-قنوات رياضية + أفلام + سلاسل + جودة عالية + سيرفرات مستقرة 24/7
+استمتع بجميع القنوات الرياضية العالمية
+وأحدث الأفلام والمسلسلات بجودة عالية
+HD / FHD / 4K بدون تقطيع
 </p>
 
 <div class="buttons">
 
-<a class="btn btn-blue" href="#prices">العروض</a>
+<a class="btn btn-blue"
+href="https://wa.me/212626869960">
+اشترك الآن
+</a>
 
-<a class="btn btn-green"
-href="https://wa.me/212626869960?text=بغيت%20IPTV">واتساب</a>
+<a class="btn btn-outline"
+href="https://wa.me/212626869960">
+تجربة مجانية 24H
+</a>
 
 </div>
 
 </div>
 
-</section>
+</header>
 
-<section class="section" id="prices">
+<!-- PACKS -->
 
-<h2 class="title">عروض <span>الاشتراك</span></h2>
+<section id="packs">
+
+<h2 class="section-title">
+الباقات <span>والأسعار</span>
+</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>3 أشهر</h3>
-<div class="price">99DH</div>
-<p>جميع القنوات + مباريات + أفلام</p>
+
+<h2>3 أشهر</h2>
+
+<div class="price">
+99DH
+</div>
+
+<div class="features">
+✔ جميع القنوات العالمية<br>
+✔ أفلام ومسلسلات<br>
+✔ جودة HD / FHD<br>
+✔ يشتغل على جميع الأجهزة<br>
+✔ دعم سريع
+</div>
+
+<a class="btn btn-blue"
+href="https://wa.me/212626869960">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="card">
-<h3>6 أشهر</h3>
-<div class="price">199DH</div>
-<p>أفضل جودة + استقرار قوي</p>
+
+<h2>6 أشهر</h2>
+
+<div class="price">
+199DH
+</div>
+
+<div class="features">
+✔ جميع القنوات الرياضية<br>
+✔ Netflix و Shahid<br>
+✔ جودة 4K<br>
+✔ بدون تقطيع<br>
+✔ سيرفر قوي
+</div>
+
+<a class="btn btn-blue"
+href="https://wa.me/212626869960">
+اطلب الآن
+</a>
+
 </div>
 
 <div class="card">
-<h3>12 شهر</h3>
-<div class="price">299DH</div>
-<p>أفضل عرض + دعم 24/7</p>
+
+<h2>12 شهر</h2>
+
+<div class="price">
+299DH
+</div>
+
+<div class="features">
+✔ أفضل اشتراك IPTV<br>
+✔ جميع الأفلام الجديدة<br>
+✔ كل القنوات العالمية<br>
+✔ تحديثات يومية<br>
+✔ أفضل عرض 🔥
+</div>
+
+<a class="btn btn-blue"
+href="https://wa.me/212626869960">
+اطلب الآن
+</a>
+
 </div>
 
 </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section id="features">
+
+<h2 class="section-title">
+لماذا <span>ElectroYou</span> ؟
+</h2>
+
+<div class="features-grid">
+
+<div class="feature">
+<h3>⚽ قنوات رياضية</h3>
+<p>
+beIN SPORTS و SSC
+وجميع البطولات العالمية
+</p>
+</div>
+
+<div class="feature">
+<h3>🎬 أفلام ومسلسلات</h3>
+<p>
+آلاف الأفلام والمسلسلات
+مع تحديثات أسبوعية
+</p>
+</div>
+
+<div class="feature">
+<h3>🚀 سيرفر سريع</h3>
+<p>
+مشاهدة بدون تقطيع
+حتى أثناء المباريات الكبرى
+</p>
+</div>
+
+<div class="feature">
+<h3>📱 جميع الأجهزة</h3>
+<p>
+Smart TV و Android و iPhone
+و PC و TV Box
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TEST -->
+
+<section id="test">
 
 <div class="test">
 
-<h2>🔥 تجربة مجانية 24 ساعة</h2>
-<p>جرب الخدمة قبل الشراء بدون أي التزام</p>
+<h2>
+تجربة مجانية 24H
+</h2>
 
-<a class="btn btn-green"
-href="https://wa.me/212626869960?text=بغيت%2024h%20test">
-طلب التجربة
+<p>
+جرّب الخدمة مجانا قبل الاشتراك
+</p>
+
+<a class="btn btn-outline"
+href="https://wa.me/212626869960">
+اطلب التجربة
 </a>
 
 </div>
 
 </section>
 
-<section class="section" id="features">
-
-<h2 class="title">لماذا <span>نحن</span> ؟</h2>
-
-<div class="features">
-
-<div class="feature">
-
-<img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=800&auto=format&fit=crop">
-
-<div class="feature-content">
-<i class="fa-solid fa-tv"></i>
-<h3>+10000 قناة</h3>
-<p>كل القنوات العالمية</p>
-</div>
-
-</div>
-
-<div class="feature">
-
-<img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=800&auto=format&fit=crop">
-
-<div class="feature-content">
-<i class="fa-solid fa-film"></i>
-<h3>أفلام وسلاسل</h3>
-<p>Netflix Style محتوى</p>
-</div>
-
-</div>
-
-<div class="feature">
-
-<img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=800&auto=format&fit=crop">
-
-<div class="feature-content">
-<i class="fa-solid fa-futbol"></i>
-<h3>مباريات مباشرة</h3>
-<p>بدون تقطيع</p>
-</div>
-
-</div>
-
-<div class="feature">
-
-<img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=800&auto=format&fit=crop">
-
-<div class="feature-content">
-<i class="fa-solid fa-mobile"></i>
-<h3>كل الأجهزة</h3>
-<p>TV / Android / iPhone</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="how">
-
-<h2 class="title">كيف <span>تعمل</span></h2>
-
-<div class="steps">
-
-<div class="step">1 - تواصل عبر واتساب</div>
-<div class="step">2 - تستلم الكود</div>
-<div class="step">3 - تشغيل مباشر</div>
-
-</div>
-
-</section>
-
-<section class="section" id="contact">
-
-<h2 class="title">تواصل <span>معنا</span></h2>
-
-<div style="text-align:center">
-
-<a class="btn btn-green"
-href="https://wa.me/212626869960?text=بغيت%20IPTV">
-
-0626869960
-
-</a>
-
-</div>
-
-</section>
+<!-- FOOTER -->
 
 <footer>
-© 2026 ElectroYou IPTV PRO
+
+© 2026 ElectroYou IPTV — جميع الحقوق محفوظة
+
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/212626869960?text=بغيت%20IPTV">
+<!-- WHATSAPP -->
 
-<i class="fab fa-whatsapp"></i>
+<a class="whatsapp"
+href="https://wa.me/212626869960">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="38"
+height="38"
+fill="white"
+viewBox="0 0 24 24">
+
+<path d="M20.52 3.48A11.79 11.79 0 0 0 12.06 0C5.52 0 .19 5.33.19 11.88c0 2.09.55 4.14 1.59 5.95L0 24l6.35-1.67a11.86 11.86 0 0 0 5.71 1.45h.01c6.54 0 11.87-5.33 11.87-11.88 0-3.17-1.24-6.15-3.42-8.42z"/>
+
+</svg>
 
 </a>
 
